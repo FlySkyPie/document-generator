@@ -1,0 +1,22 @@
+{
+    "name": "flyskypie/document-generator",
+    "description": "To create documents for meeting.",
+    "type": "library",
+    "require": {
+        "vlucas/phpdotenv": "^3.3",
+        "berduj/odtphp": "^1.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FlySkyPie(Wei Ji)",
+            "email": "c445dj544@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload":{
+        "psr-4": {
+        "FlySkyPie\\DocumentGenerator\\": "src/"
+        }
+    }
+}
