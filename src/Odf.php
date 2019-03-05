@@ -4,10 +4,10 @@ namespace FlySkyPie\DocumentGenerator;
 
 use FlySkyPie\DocumentGenerator\Segment;
 
-class Odt extends Odtphp\Odt {
+class Odt extends Odtphp\Odf {
   
   /*
-   * override, set default encode as utf-8
+   * Override, set default encode as utf-8.
    */
   public function setVars($key, $value, $encode = true, $charset = 'UTF-8') {
     parent::setVars($key, $value, $encode, $charset);
