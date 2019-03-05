@@ -3,8 +3,7 @@
     "description": "To create documents for meeting.",
     "type": "library",
     "require": {
-        "vlucas/phpdotenv": "^3.3",
-        "berduj/odtphp": "^1.7"
+        "cybermonde/odtphp": "^2.0"
     },
     "license": "MIT",
     "authors": [
@@ -13,7 +12,7 @@
             "email": "c445dj544@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload":{
         "psr-4": {
         "FlySkyPie\\DocumentGenerator\\": "src/"
