@@ -2,15 +2,15 @@
 
 namespace FlySkyPie\DocumentGenerator;
 
-use FlySkyPie\DocumentGenerator\Odf;
+use FlySkyPie\DocumentGenerator\OdtRenderer;
 
 
 abstract class Generator {
 
-  private $Odf;
+  private $OdtRenderer;
   
   public function __construct($FilePath) {
-    $this->Odf = new Odf($FilePath);
+    $this->OdtRenderer = new OdtRenderer($FilePath);
   }
 
   /*
@@ -19,7 +19,7 @@ abstract class Generator {
    */
 
   public function saveDocument($FilePath) {
-    $this->Odt->saveToDisk($FilePath);
+    $this->OdtRenderer->saveToDisk($FilePath);
   }
 
   /*
@@ -28,7 +28,7 @@ abstract class Generator {
    */
 
   public function exportAsAttachedFileexportAsAttachedFile($FileName = "") {
-    $this->Odt->exportAsAttachedFile($FileName);
+    $this->OdtRenderer->exportAsAttachedFile($FileName);
   }
 
 }

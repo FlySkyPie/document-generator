@@ -3,8 +3,9 @@
 namespace FlySkyPie\DocumentGenerator;
 
 use FlySkyPie\DocumentGenerator\Segment;
+use Odtphp\Odf;
 
-class Odf extends Odtphp\Odf {
+class OdtRenderer extends Odf {
   
   /*
    * Override, set default encode as utf-8.
