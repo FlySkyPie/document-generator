@@ -4,7 +4,6 @@ namespace FlySkyPie\DocumentGenerator;
 
 use FlySkyPie\DocumentGenerator\OdtRenderer;
 
-
 abstract class Generator {
 
   private $OdtRenderer;

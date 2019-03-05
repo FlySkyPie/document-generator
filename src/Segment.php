@@ -2,7 +2,7 @@
 
 namespace FlySkyPie\DocumentGenerator;
 
-class Segment extends Odtphp\Segment {
+class Segment extends \Odtphp\Segment {
 
   /*
    * Override, set default encode as utf-8.
