@@ -7,7 +7,7 @@ use FlySkyPie\DocumentGenerator\OdtRenderer;
 abstract class Generator {
 
   private $OdtRenderer;
-  
+
   public function __construct($FilePath) {
     $this->OdtRenderer = new OdtRenderer($FilePath);
   }
@@ -28,6 +28,10 @@ abstract class Generator {
 
   public function exportAsAttachedFileexportAsAttachedFile($FileName = "") {
     $this->OdtRenderer->exportAsAttachedFile($FileName);
+  }
+
+  public function getRenderer() {
+    return $this->OdtRenderer;
   }
 
 }
