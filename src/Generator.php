@@ -4,11 +4,11 @@ namespace FlySkyPie\DocumentGenerator;
 
 use FlySkyPie\DocumentGenerator\OdtRenderer;
 
-abstract class Generator {
+ abstract class Generator {
 
-  private $OdtRenderer;
-  private $ContentIndexs = [];
-  private $Parameter = [];
+  protected $OdtRenderer;
+  protected $Parameter = [];
+  protected $ContentIndexs = [];
 
   public function __construct($FilePath, $Parameter) {
     $this->Parameter = $Parameter;
@@ -17,7 +17,7 @@ abstract class Generator {
     $this->loadContent();
   }
 
-  private function checkParameter() {
+  protected function checkParameter() {
     foreach ($this->ContentIndexs as $ContentIndex) {
       if (!array_key_exists($ContentIndex, $this->Parameter)) {
         $this->Parameter["$ContentIndex"] = ""; //default is empty string
@@ -25,9 +25,7 @@ abstract class Generator {
     }
   }
 
-  private function loadContent() {
-    //override
-  }
+  abstract protected function loadContent();
 
   /*
    * Rplace Key with Content from template.
@@ -35,7 +33,7 @@ abstract class Generator {
    * @param string $Content  
    */
 
-  private function setContent($Key, $Content) {
+  protected function setContent($Key, $Content) {
     $this->OdtRenderer->setVars($Key, $Content);
   }
 
